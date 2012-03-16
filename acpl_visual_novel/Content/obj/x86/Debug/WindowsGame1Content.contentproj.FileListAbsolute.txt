@@ -1,0 +1,6 @@
+C:\Users\mmain\Downloads\ZombieSchmup\Some Kind of Game\WindowsGame1\Content\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\mmain\Documents\Visual Studio 2010\Projects\acpl_frontend\Some Kind of Game\WindowsGame1\Content\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\mmain\Documents\Visual Studio 2010\Projects\acpl_frontend\acpl_visual_novel\WindowsGame1\Content\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\mmain\Documents\Visual Studio 2010\Projects\acpl_visual_novel\acpl_visual_novel\acpl_visual_novel\Content\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\mmain\Documents\Visual Studio 2010\Projects\acpl_project\acpl_visual_novel\Content\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\mmain\Documents\Visual Studio 2010\Projects\acpl_project_v2\acpl_visual_novel\Content\obj\x86\Debug\ResolveAssemblyReference.cache

@@ -1,0 +1,62 @@
+#FORMAT FOR SCRIPT
+#event_id:location/time-date/[optional commands]...
+#>actor:dialog<[optional commands]...
+#...
+#*choice->next_event*[optional commands](optional conditions)
+#...
+#
+#HOW TO CHANGE IMAGES
+#add actor:image
+#change actor:image
+#move location
+#
+#HOW TO SET AND TEST KEYS
+#[set key]					sets key to active
+#(key)						checks if a key is set
+#(!key)						checks if a key is not set
+#(key1 OR key2)				checks if key1 or key2 is set
+#(key1 AND key2)			checks if key1 and key2 are both set
+#(key1 AND (key2 OR key3))	checks if key1 and either key2 or key3 are set
+#etc...
+
+0:Your room/6:00am/
+[move classroom:night]
+[add mom:default:left]
+[add kid:surprised:right]
+>Narrator: You wake up to the smell of breakfast.<
+[change mom:default]
+>Mom: Good morning sweetheart.<
+[change kid:sad]
+>Kid: Mom...its early.<
+*Go down to breakfast -> 1*
+*Brush your teeth -> 2* [set brushed_teeth]
+
+1:Dining Room/Morning/
+[move classroom:night]
+[add mom:sad:left] (!brushed_teeth)
+[add mom:laughing:left] (brushed_teeth AND used_soap)
+[add mom:default:left] (brushed_teeth AND !used_soap)
+[add kid:default:right]
+>Mom: I think you forgot to brush your teeth!< (!brushed_teeth)
+>Mom: Lets eat!< (brushed_teeth AND !used_soap)
+>Mom: Did you use soap again accidentally?< (brushed_teeth AND used_soap)
+>Kid: Oops!< (!brushed_teeth)
+>Kid: Lol!< (brushed_teeth)
+*Go brush them -> 2* [set brushed_teeth](!brushed_teeth)
+*Don't brush them -> 3* (!brushed_teeth)
+*Eat -> 4* (brushed_teeth)
+
+2:Your room/Morning/[add kid:surprised:right][move classroom:day]
+[add kid:surprised:right]
+[move classroom:day]
+>Kid: I gotta brush my teeth first mom.  I'll be right down!<
+[change kid:default]
+>Kid: Man...I love brushing my teeth!<
+*Use Colgate -> 1*
+*Use Soap Accidentally -> 1* [set used_soap]
+
+3:Your grave/12:00am/
+[move classroom:night]
+>Narrator: You got cavities! OH TEH NOES!<
+*Go to the Dentist -> 4*
+*Lose teeth -> 4*

@@ -1,0 +1,7 @@
+Content\chibigirl.xnb
+Content\chibigirl_anim.xnb
+Content\arrow.xnb
+Content\gng2.xnb
+Content\gng2.wma
+Content\chibigirl.png
+Content\chibigirl_anim.png

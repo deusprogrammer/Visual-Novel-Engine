@@ -1,0 +1,43 @@
+C:\Users\mmain\Documents\Visual Studio 2008\Projects\WindowsGame1\WindowsGame1\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\mmain\Documents\Visual Studio 2008\Projects\WindowsGame1\WindowsGame1\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\mmain\Documents\Visual Studio 2008\Projects\WindowsGame1\WindowsGame1\bin\x86\Debug\Content\chibigirl.xnb
+C:\Users\mmain\Documents\Visual Studio 2008\Projects\WindowsGame1\WindowsGame1\bin\x86\Debug\WindowsGame1.exe
+C:\Users\mmain\Documents\Visual Studio 2008\Projects\WindowsGame1\WindowsGame1\bin\x86\Debug\WindowsGame1.pdb
+C:\Users\mmain\Documents\Visual Studio 2008\Projects\WindowsGame1\WindowsGame1\obj\x86\Debug\WindowsGame1.exe
+C:\Users\mmain\Documents\Visual Studio 2008\Projects\WindowsGame1\WindowsGame1\obj\x86\Debug\WindowsGame1.pdb
+C:\Users\mmain\Documents\Visual Studio 2008\Projects\WindowsGame1\WindowsGame1\bin\x86\Debug\Content\chibigirl.png
+C:\Users\mmain\Documents\Visual Studio 2008\Projects\WindowsGame1\WindowsGame1\bin\x86\Debug\Content\chibigirl_anim.xnb
+C:\Users\mmain\Documents\Visual Studio 2008\Projects\WindowsGame1\WindowsGame1\bin\x86\Debug\Content\chibigirl_anim.png
+C:\Users\mmain\Documents\Visual Studio 2008\Projects\Some Kind of Game\WindowsGame1\bin\x86\Debug\Content\chibigirl.xnb
+C:\Users\mmain\Documents\Visual Studio 2008\Projects\Some Kind of Game\WindowsGame1\bin\x86\Debug\Content\chibigirl_anim.xnb
+C:\Users\mmain\Documents\Visual Studio 2008\Projects\Some Kind of Game\WindowsGame1\bin\x86\Debug\Content\chibigirl.png
+C:\Users\mmain\Documents\Visual Studio 2008\Projects\Some Kind of Game\WindowsGame1\bin\x86\Debug\Content\chibigirl_anim.png
+C:\Users\mmain\Documents\Visual Studio 2008\Projects\Some Kind of Game\WindowsGame1\bin\x86\Debug\WindowsGame1.exe
+C:\Users\mmain\Documents\Visual Studio 2008\Projects\Some Kind of Game\WindowsGame1\bin\x86\Debug\WindowsGame1.pdb
+C:\Users\mmain\Documents\Visual Studio 2008\Projects\Some Kind of Game\WindowsGame1\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\mmain\Documents\Visual Studio 2008\Projects\Some Kind of Game\WindowsGame1\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\mmain\Documents\Visual Studio 2008\Projects\Some Kind of Game\WindowsGame1\obj\x86\Debug\WindowsGame1.exe
+C:\Users\mmain\Documents\Visual Studio 2008\Projects\Some Kind of Game\WindowsGame1\obj\x86\Debug\WindowsGame1.pdb
+C:\Users\mmain\Documents\Visual Studio 2008\Projects\Some Kind of Game\WindowsGame1\bin\x86\Debug\Content\arrow.xnb
+C:\Users\mmain\Documents\Visual Studio 2008\Projects\Some Kind of Game\WindowsGame1\bin\x86\Debug\Content\gng2.xnb
+C:\Users\mmain\Documents\Visual Studio 2008\Projects\Some Kind of Game\WindowsGame1\bin\x86\Debug\Content\gng2.wma
+C:\Users\mmain\Downloads\ZombieSchmup\Some Kind of Game\WindowsGame1\bin\x86\Debug\Content\chibigirl.xnb
+C:\Users\mmain\Downloads\ZombieSchmup\Some Kind of Game\WindowsGame1\bin\x86\Debug\Content\chibigirl_anim.xnb
+C:\Users\mmain\Downloads\ZombieSchmup\Some Kind of Game\WindowsGame1\bin\x86\Debug\Content\arrow.xnb
+C:\Users\mmain\Downloads\ZombieSchmup\Some Kind of Game\WindowsGame1\bin\x86\Debug\Content\gng2.xnb
+C:\Users\mmain\Downloads\ZombieSchmup\Some Kind of Game\WindowsGame1\bin\x86\Debug\Content\gng2.wma
+C:\Users\mmain\Downloads\ZombieSchmup\Some Kind of Game\WindowsGame1\bin\x86\Debug\Content\chibigirl.png
+C:\Users\mmain\Downloads\ZombieSchmup\Some Kind of Game\WindowsGame1\bin\x86\Debug\Content\chibigirl_anim.png
+C:\Users\mmain\Downloads\ZombieSchmup\Some Kind of Game\WindowsGame1\bin\x86\Debug\WindowsGame1.exe
+C:\Users\mmain\Downloads\ZombieSchmup\Some Kind of Game\WindowsGame1\bin\x86\Debug\WindowsGame1.pdb
+C:\Users\mmain\Downloads\ZombieSchmup\Some Kind of Game\WindowsGame1\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\mmain\Downloads\ZombieSchmup\Some Kind of Game\WindowsGame1\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\mmain\Downloads\ZombieSchmup\Some Kind of Game\WindowsGame1\obj\x86\Debug\WindowsGame1.exe
+C:\Users\mmain\Downloads\ZombieSchmup\Some Kind of Game\WindowsGame1\obj\x86\Debug\WindowsGame1.pdb
+C:\Users\mmain\Documents\Visual Studio 2010\Projects\acpl_frontend\Some Kind of Game\WindowsGame1\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\mmain\Documents\Visual Studio 2010\Projects\acpl_frontend\Some Kind of Game\WindowsGame1\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\mmain\Documents\Visual Studio 2010\Projects\acpl_frontend\Some Kind of Game\WindowsGame1\obj\x86\Debug\WindowsGame1.exe
+C:\Users\mmain\Documents\Visual Studio 2010\Projects\acpl_frontend\Some Kind of Game\WindowsGame1\obj\x86\Debug\WindowsGame1.pdb
+C:\Users\mmain\Documents\Visual Studio 2010\Projects\acpl_frontend\Some Kind of Game\WindowsGame1\bin\x86\Debug\WindowsGame1.exe
+C:\Users\mmain\Documents\Visual Studio 2010\Projects\acpl_frontend\Some Kind of Game\WindowsGame1\bin\x86\Debug\WindowsGame1.pdb
+C:\Users\mmain\Documents\Visual Studio 2010\Projects\acpl_frontend\Some Kind of Game\WindowsGame1\bin\x86\Debug\Content\mono.xnb
