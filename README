@@ -182,7 +182,7 @@ images/textboxes
         change actor:new_emotion    changes an actor's emotion to the new_emotion.
         move location:descriptor    changes the background to location with
                                     descriptor.
-        set key					    sets key to active or creates it if it doesn't
+        set key                     sets key to active or creates it if it doesn't
                                     exist.
                                     
     Please note that all commands are surrounded with square brackets [].
