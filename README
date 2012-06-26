@@ -61,7 +61,7 @@ images/textboxes
         #...
         #
         #HOW TO CHANGE IMAGES
-        #add actor:image
+        #add actor:image:direction
         #change actor:image
         #move location
         #
@@ -178,12 +178,13 @@ images/textboxes
     the most part they just change images around or set keys.  Here is a list
     of the currently supported commands:
     
-        add actor:emotion           adds an actor to the scene with given emotion.
-        change actor:new_emotion    changes an actor's emotion to the new_emotion.
-        move location:descriptor    changes the background to location with
-                                    descriptor.
-        set key                     sets key to active or creates it if it doesn't
-                                    exist.
+        add actor:emotion:direction     adds an actor to the scene with given emotion
+                                        on the given side of the screen (right or left).
+        change actor:new_emotion        changes an actor's emotion to the new_emotion.
+        move location:descriptor        changes the background to location with
+                                        descriptor.
+        set key                         sets key to active or creates it if it doesn't
+                                        exist.
                                     
     Please note that all commands are surrounded with square brackets [].
     
