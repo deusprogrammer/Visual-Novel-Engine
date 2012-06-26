@@ -1,0 +1,228 @@
+---------------------
+>Visual Novel Engine<
+---------------------
+This program allows a Visual Novel to be constructed completely using a simple scripting
+language.  This documentation will explain how to do this.
+
+--------------------------------------------
+>Directory structure and naming conventions<
+--------------------------------------------
+    This is very important.  The Visual Novel engine reads these directories
+    for the given resources it needs to access.  It determines the name and function
+    of the asset based on the name of the file.  The extension naturally doesn't matter.
+
+images/actors
+    This folder contains the actors (i.e. the characters portrayed in the game).  They must
+    be named thusly:
+    
+        actor_emotion.ext
+        
+    Where "actor" is the actor's name, and "emotion" is the emotion that the character is showing
+    in the image.  And of course "ext" is just whatever the file type happens to be (i.e. jpg).
+    
+    So for example if you have a character named Ami who looks sad in this picture, you would name
+    the file:
+    
+        ami_sad.png
+
+images/backgrounds
+    This folder contains the images that make up the backgrounds of the different scenes.  In the
+    script we call these "locations".  These must be named thusly:
+    
+        location_descriptor.ext
+        
+    Where "location" is the name of the location, and "descriptor" is a word that describes that
+    version of the location.
+    
+    So for example if you have an image of Ami's bedroom at night, it might be named: 
+        
+        ami-bedroom_night.png
+        
+images/textboxes
+    This folder contains the images that make up the textbox backgrounds.  There must be one textbox
+    named:
+    
+        textbox_default.ext
+        
+-----------
+>Scripting<
+-----------
+    Here you will see why those image names are important.  In order to facilitate this, I will provide
+    an example script and then go over it.
+    
+    <BEGIN SCRIPT>
+        #FORMAT FOR SCRIPT
+        #event_id:location/time-date/
+        #[optional command] (optional conditions)
+        #...
+        #>actor:dialog<
+        #...
+        #*choice->next_event*[optional commands](optional conditions)
+        #...
+        #
+        #HOW TO CHANGE IMAGES
+        #add actor:image
+        #change actor:image
+        #move location
+        #
+        #HOW TO SET AND TEST KEYS
+        #[set key]					sets key to active
+        #(key)						checks if a key is set
+        #(!key)						checks if a key is not set
+        #(key1 OR key2)				checks if key1 or key2 is set
+        #(key1 AND key2)			checks if key1 and key2 are both set
+        #(key1 AND (key2 OR key3))	checks if key1 and either key2 or key3 are set
+        #etc...
+
+        0:Your room/6:00am/
+        [move classroom:night]
+        [add mom:default:left]
+        [add kid:surprised:right]
+        >Narrator: You wake up to the smell of breakfast.<
+        [change mom:default]
+        >Mom: Good morning sweetheart.<
+        [change kid:sad]
+        >Kid: Mom...its early.<
+        *Go down to breakfast -> 1*
+        *Brush your teeth -> 2* [set brushed_teeth]
+
+        1:Dining Room/Morning/
+        [move classroom:night]
+        [add mom:sad:left] (!brushed_teeth)
+        [add mom:laughing:left] (brushed_teeth AND used_soap)
+        [add mom:default:left] (brushed_teeth AND !used_soap)
+        [add kid:default:right]
+        >Mom: I think you forgot to brush your teeth!< (!brushed_teeth)
+        >Mom: Lets eat!< (brushed_teeth AND !used_soap)
+        >Mom: Did you use soap again accidentally?< (brushed_teeth AND used_soap)
+        >Kid: Oops!< (!brushed_teeth)
+        >Kid: Lol!< (brushed_teeth)
+        *Go brush them -> 2* [set brushed_teeth](!brushed_teeth)
+        *Don't brush them -> 3* (!brushed_teeth)
+        *Eat -> 4* (brushed_teeth)
+
+        2:Your room/Morning/[add kid:surprised:right][move classroom:day]
+        [add kid:surprised:right]
+        [move classroom:day]
+        >Kid: I gotta brush my teeth first mom.  I'll be right down!<
+        [change kid:default]
+        >Kid: Man...I love brushing my teeth!<
+        *Use Colgate -> 1*
+        *Use Soap Accidentally -> 1* [set used_soap]
+
+        3:Your grave/12:00am/
+        [move classroom:night]
+        >Narrator: You got cavities! OH TEH NOES!<
+        *Go to the Dentist -> 4*
+        *Lose teeth -> 4*
+    <END SCRIPT>
+    
+    So for starters, just like any scripting language (such as Perl, PHP or Python)
+    comments begin with a hash symbol (#).  The game completely ignores any line
+    that starts with such a character.
+    
+    The script is split up into events.  These are the events that the game jumps
+    between as the user makes choices.  There are three parts to an event.  The
+    first part is always an event line.  They look like this:
+    
+    event_id:location/time-date/
+    
+    ARGUMENTS:
+        +event_id: this gives the event a unique id number.  If you duplicate this
+            number, the engine will overwrite the previous event with that id.
+        +location: this won't change the background for you, but it will show the
+            location on the screen.
+        +time-date: this will also simply show this text on the screen, and won't
+            change the image.
+            
+    The following lines can be one of many things it can be a command, a piece
+    of dialog, or a choice.
+    
+    Any of these items can also have a condition attached to them, which allow
+    for different dialog, commands, or choices based on previous choices.  The
+    syntax for each of these is as follows:
+    
+    [optional command] (optional conditions)
+    ARGUMENTS:
+        +optional command: this command will be executed in the order it is
+            listed in the event.
+        +optional conditions: this command will only be executed if this
+            condition is true.
+    
+    >actor:dialog< (optional conditions)
+    ARGUMENTS:
+        +actor: the actor performing the dialog.  This name should match the names
+            you used in naming the files.
+        +dialog: the dialog the actor is saying
+        +optional conditions: this dialog will only be displayed
+            if these conditions are valid.
+    
+    *choice->next_event*[optional commands](optional conditions)
+    ARGUMENTS:
+        +choice: the text display for the choice
+        +next_event: the id of the event this choice leads to.
+        +optional commands: these commands will be executed if
+            this choice is taken.
+        +optional conditions: this choice will only be displayed
+            if these conditions are valid.
+            
+    These make up the script in total.  Please note that all dialog is enclosed
+    in inverted angle brackets >< and all choices are enclosed in asterixs **.
+    
+    In the next section we will talk about commands.
+
+----------
+>Commands<
+----------
+    There are a number of commands available in this Visual Novel Engine. For
+    the most part they just change images around or set keys.  Here is a list
+    of the currently supported commands:
+    
+        add actor:emotion           adds an actor to the scene with given emotion.
+        change actor:new_emotion    changes an actor's emotion to the new_emotion.
+        move location:descriptor    changes the background to location with
+                                    descriptor.
+        set key					    sets key to active or creates it if it doesn't
+                                    exist.
+                                    
+    Please note that all commands are surrounded with square brackets [].
+    
+------------
+>Conditions<
+------------
+    Conditions follow boolean logic.  Each key you create or set is a boolean.
+    If a key is set, then that counts as a true.  If a key isn't set, then it
+    is false.  A condition can combine multiple keys using the keywords AND and
+    OR and impose order of operation using parenthesis ().  Also inversion can be
+    performed using the bang symbol ! .  I will provide truth tables and then an
+    example.
+    
+    Truth Table
+    ----------------------------
+    | a | b | a AND b | a OR b |
+    ----------------------------
+    | F | F |    F    |    F   |
+    | F | T |    F    |    T   |
+    | T | F |    F    |    T   |
+    | T | T |    T    |    T   |
+    ----------------------------
+    
+    Example
+        Lets say your character in the visual novel made some bad choices with Ami.
+        So for example, you told her that you hated kids and that you didn't like
+        the idea of marriage.  She happens to love kids and the idea of marriage,
+        so she isn't going to ask you to go to the festival with her.  Here is
+        that idea in script:
+        
+        >Ami: Would you like to go to the festival with me? *Blush*< (!hate_kids AND marriage_good)
+        >Ami: Go jump in front of a train!< (hate_kids OR !marriage_good)
+        
+        Now lets extend the example, lets say you stood up for her earlier, and that
+        negates all the bad things you could have said to her.  Then you might have:
+        
+        >Ami: Would you like to go to the festival with me? *Blush*< ((!hate_kids AND marriage_good) OR stood_up)
+        >Ami: Go jump in front of a train!< ((hate_kids OR !marriage_good) AND !stood_up)
+        
+        These conditions for each dialog choice are clearly negations of each other.
+        This isn't convenient though...in future versions I will add an else condition
+        so you don't have to form your own negations like this.
