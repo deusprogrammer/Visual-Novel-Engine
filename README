@@ -17,38 +17,46 @@ images/actors
     
         actor_emotion.ext
         
-    Where "actor" is the actor's name, and "emotion" is the emotion that the character is showing
-    in the image.  And of course "ext" is just whatever the file type happens to be (i.e. jpg).
+    Where "actor" is the actor's name, and "emotion" is the emotion that the character
+    is showing in the image.  And of course "ext" is just whatever the file type 
+    happens to be (i.e. jpg).
     
-    So for example if you have a character named Ami who looks sad in this picture, you would name
-    the file:
+    So for example if you have a character named Ami who looks sad in this picture, you 
+    would name the file:
     
         ami_sad.png
 
 images/backgrounds
-    This folder contains the images that make up the backgrounds of the different scenes.  In the
-    script we call these "locations".  These must be named thusly:
+    This folder contains the images that make up the backgrounds of the different
+    scenes.  In the script we call these "locations".  These must be named thusly:
     
         location_descriptor.ext
         
-    Where "location" is the name of the location, and "descriptor" is a word that describes that
-    version of the location.
+    Where "location" is the name of the location, and "descriptor" is a word that
+    describes that version of the location.
     
     So for example if you have an image of Ami's bedroom at night, it might be named: 
         
         ami-bedroom_night.png
         
 images/textboxes
-    This folder contains the images that make up the textbox backgrounds.  There must be one textbox
-    named:
+    This folder contains the images that make up the textbox backgrounds.  There 
+    must be one textbox named:
     
         textbox_default.ext
+        
+    This folder can contain many other textbox backgrounds as well.  Just give them
+    a name like this:
+        
+        textbox_name.ext
+        
+    Then you can change textbox backgrounds with a command.
         
 -----------
 >Scripting<
 -----------
-    Here you will see why those image names are important.  In order to facilitate this, I will provide
-    an example script and then go over it.
+    Here you will see why those image names are important.  In order to facilitate
+    this, I will provide an example script and then go over it.
     
     <BEGIN SCRIPT>
         #FORMAT FOR SCRIPT
