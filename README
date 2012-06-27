@@ -74,12 +74,12 @@ images/textboxes
         #move location
         #
         #HOW TO SET AND TEST KEYS
-        #[set key]					sets key to active
-        #(key)						checks if a key is set
-        #(!key)						checks if a key is not set
-        #(key1 OR key2)				checks if key1 or key2 is set
-        #(key1 AND key2)			checks if key1 and key2 are both set
-        #(key1 AND (key2 OR key3))	checks if key1 and either key2 or key3 are set
+        #[set key]                  sets key to active
+        #(key)                      checks if a key is set
+        #(!key)                     checks if a key is not set
+        #(key1 OR key2)             checks if key1 or key2 is set
+        #(key1 AND key2)            checks if key1 and key2 are both set
+        #(key1 AND (key2 OR key3))  checks if key1 and either key2 or key3 are set
         #etc...
 
         0:Your room/6:00am/
